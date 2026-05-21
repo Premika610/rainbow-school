@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="school.css"
+
+<nav>  
+<div class="logo">🌈 Rainbow School</div>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="courses.html">Courses</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<section>
+
+    <h2>School Progress</h2>
+
+    <div class="progress-container">
+
+      <div class="progress-card">
+        <h1 id="counter1">0</h1>
+        <p>Students</p>
+      </div>
+
+      <div class="progress-card">
+        <h1 id="counter2">0</h1>
+        <p>Teachers</p>
+      </div>
+
+      <div class="progress-card">
+        <h1 id="counter3">0</h1>
+        <p>Graduates</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- VIDEO -->
+
+  <section>
+
+    <h2>School Introduction Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/oIBKixSB3PA?si=VUHaDsJM9Z2Z3pHN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <h2>Contact Us</h2>
+
+    <form>
+
+      <input type="text" placeholder="Your Name">
+
+      <input type="email" placeholder="Your Email">
+
+      <textarea rows="5" placeholder="Your Message"></textarea>
+
+      <button type="submit">Send Message</button>
+
+    </form>
+
+  </section>
+
+  <!-- FLOATING CIRCLES -->
+
+  <div class="circle c1"></div>
+  <div class="circle c2"></div>
+  <div class="circle c3"></div>
+  <div class="circle c4"></div>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h2>Connect With Us</h2>
+
+    <div class="socials">
+
+      <a href="#">📘</a>
+      <a href="#">📸</a>
+      <a href="#">▶️</a>
+      <a href="#">🌐</a>
+
+    </div>
+
+    <p>© 2026 Rainbow School Website 🌈</p>
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    function animateCounter(id,target){
+
+      let count=0;
+
+      let speed=target/100;
+
+      let update=setInterval(function(){
+
+        count+=speed;
+
+        if(count>=target){
+
+          count=target;
+
+          clearInterval(update);
+
+        }
+
+        document.getElementById(id).innerText=
+        Math.floor(count);
+
+      },20);
+
+    }
+
+    animateCounter("counter1",2500);
+    animateCounter("counter2",120);
+    animateCounter("counter3",5000);
+
+  </script>
+
+</body>
+</html>
